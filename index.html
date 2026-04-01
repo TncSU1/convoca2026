@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Petition Page</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.logo {
+  width: 70px;
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.button {
+  margin-top: 20px;
+  background: #2d9af5;
+  color: white;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #1b7ed6;
+}
+
+/* Desktop adjustments */
+@media (min-width: 768px) {
+  .container {
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .button {
+    width: auto;
+    padding: 12px 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Logo -->
+  <img src="https://yt3.googleusercontent.com/ytc/AIdro_mzCb6gjHhuaBK1-4jWLCJHCfZ05kXWCnKzLu5DMpY6GQ=s900-c-k-c0x00ffffff-no-rj" class="logo"/>
+
+  <h1>The New College Student Petition</h1>
+
+  <p>
+    The New College - Rs.200 Convocation Registration Fees Email Petition. 
+    Click below to send your representation email.
+  </p>
+
+  <!-- EMAIL BUTTON -->
+  <button class="button" onclick="sendEmail()">
+    Send Email
+  </button>
+
+</div>
+
+<script>
+function sendEmail() {
+
+  const to = "usir-dopt@nic.in,rti.appeal@gov.in,Rjdcechennai@gmail.com,cmcell@tn.gov.in";
+
+  const cc = "thenewcollege600014@gmail.com,asrarsheriff@thenewcollege.edu.in";
+
+  const subject = "Clarification for collecting Convocation Registration fees - The New College.";
+
+  const body = `To
+The Public Information Officer / Concerned Authority and CM Cell Officer
+
+Respected Sir/Madam,
+
+I am writing to get clarification regarding the collection of an additional Convocation Registration Fee from students by our The New College which is planned on 2nd & 4th April 2026.
+
+We, the students, have already paid all the required academic and examination-related fees, including:
+- Application Fee
+- Statement of Marksheet Fee
+- Central Valuation Fee
+- Consolidated Marksheet Fee
+- Provisional Certificate Fee
+- Degree Certificate Fee
+- Permanent Registration Fee
+- Final Semester Examination Fee (approximately Rs. 5000)
+
+Despite the above payments, the institution is now collecting an additional Convocation Registration Fee of Rs. 200 separately.
+
+In this regard, I kindly request you to provide the following information:
+
+1. Reason for collection of a separate convocation registration fee.
+2. The justification and purpose for collecting this additional fee.
+3. Whether this fee has been approved by the competent authority.
+4. Clarification on whether payment is mandatory for receiving the degree certificate.
+
+Thank you Sir/Madam, awaiting your immediate response.
+
+Yours sincerely,
+[Your Name]
+[Your Register Number]
+[Course & Department]
+The New College (Autonomous), Chennai - 14`;
+
+  const link = `mailto:${to}?cc=${cc}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = link;
+}
+</script>
+
+</body>
+</html>
